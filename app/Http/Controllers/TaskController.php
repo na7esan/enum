@@ -74,7 +74,9 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        //
+        $task->fill($request->all())->save();
+        return redirect()
+            ->route('tasks.show', ['task' => $task]);
     }
 
     /**
