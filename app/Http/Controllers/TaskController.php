@@ -37,8 +37,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
-        return 'ここでタスク登録処理';
+        Task::create($request->all());
+        
+        return redirect()
+            ->route('tasks.index');
     }
 
     /**

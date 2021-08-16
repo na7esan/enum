@@ -9,6 +9,13 @@ class Task extends Model
 {
     use HasFactory;
 
+    /**
+     * 複数代入可能な属性
+     *
+     * @var array
+     */
+    protected $fillable = ['body','category'];
+
     private const CATEGORY = [
         1 => "MUST",
         2 => "SOMEDAY",
