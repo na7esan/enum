@@ -17,7 +17,8 @@
     </header>
 
     <h1>タスク詳細ページ</h1>
-    <a href="{{ route('tasks.edit',$task) }}">[編集]</a>
+    <a href="{{ route('tasks.edit', $task) }}">[編集]</a>
+
 
     <p>ID:{{ $task->id }}</p>
     <p>内容:{{ $task->body }}</p>
@@ -25,6 +26,13 @@
     <p>作成日時:{{ $task->created_at }}</p>
     <p>更新日時:{{ $task->updated_at }}</p>
     <hr>
+
+    <form action="{{ route('tasks.destroy', $task) }}" method="post">
+        @csrf
+        @method('delete')
+
+        <button>[削除]</button>
+    </form>
 
 </body>
 
