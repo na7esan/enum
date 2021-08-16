@@ -22,7 +22,8 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'body' =>$this->faker->realText(10),
+            'category' =>$this->faker->numberBetween(1,3),
         ];
     }
 }
