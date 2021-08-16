@@ -8,9 +8,8 @@
     <h1>タスク一覧ページ</h1>
     @foreach ($tasks as $task)
         <p>タスク内容:{{ $task->body }}</p>
-        <p>カテゴリ:{{ $task->category }}</p>
+        <p>カテゴリ:{{ $task->category}}</p>
         <hr>
-
     @endforeach
 </body>
 </html>
