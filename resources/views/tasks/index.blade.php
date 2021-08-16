@@ -18,7 +18,7 @@
 
     <h1>タスク一覧ページ</h1>
     @foreach ($tasks as $task)
-        <p>タスク内容:{{ $task->body }}</p>
+        <p><a href="{{ route('tasks.show', $task) }}">タスク内容:{{ $task->body }}</a></p>
         <p>カテゴリ:{{ $task->category }}</p>
         <hr>
     @endforeach
