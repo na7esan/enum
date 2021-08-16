@@ -37,7 +37,8 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
+        return 'ここでタスク登録処理';
     }
 
     /**
