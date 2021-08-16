@@ -14,11 +14,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        // タスク一覧を取得してビューに渡す
         $tasks=Task::all();
-        
+
         return view('tasks.index',['tasks'=>$tasks]);
-        dd();
     }
 
     /**
