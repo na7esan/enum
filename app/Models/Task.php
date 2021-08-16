@@ -16,7 +16,7 @@ class Task extends Model
     ];
 
 
-    public function getCategoryAttribute(int $num):string
+    public final function getCategoryAttribute(int $num):string
     {
         return self::CATEGORY[$num];
     }
