@@ -14,9 +14,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks=Task::all();
+        $tasks = Task::all();
 
-        return view('tasks.index',['tasks'=>$tasks]);
+        return view('tasks.index', ['tasks' => $tasks]);
     }
 
     /**
@@ -38,7 +38,7 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         Task::create($request->all());
-        
+
         return redirect()
             ->route('tasks.index');
     }
@@ -51,7 +51,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        //
+        return view('tasks.show', ['task' => $task]);
     }
 
     /**
@@ -62,7 +62,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        return 'edit画面を作成する';
     }
 
     /**
