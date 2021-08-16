@@ -1,7 +1,3 @@
-{{-- @php
-                dd($task->category)
-
-@endphp --}}
 <!DOCTYPE html>
 <html lang="ja">
 
