@@ -62,7 +62,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        return 'edit画面を作成する';
+        return view('tasks.edit', ['task' => $task]);
     }
 
     /**

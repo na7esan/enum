@@ -16,7 +16,7 @@ class Task extends Model
      */
     protected $fillable = ['body','category'];
 
-    private const CATEGORY = [
+    const CATEGORY = [
         1 => "MUST",
         2 => "SOMEDAY",
         3 => "DONT DO ",
